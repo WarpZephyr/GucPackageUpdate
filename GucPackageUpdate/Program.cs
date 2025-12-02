@@ -6,6 +6,7 @@ namespace GucPackageUpdate
     internal class Program
     {
         private const string UsrDirName = "USRDIR";
+        private static bool HadErrors;
 
         static void Main(string[] args)
         {
@@ -18,6 +19,11 @@ namespace GucPackageUpdate
                 {
                     ProcessDirectory(packagelistPath);
                     Log.WriteLine("Finished.");
+
+                    if (HadErrors)
+                    {
+                        Log.Pause();
+                    }
                     return;
                 }
 
@@ -65,6 +71,7 @@ namespace GucPackageUpdate
         {
             if (!PackageList.TryFromFile(file, out PackageList? packageList))
             {
+                HadErrors = true;
                 return;
             }
 

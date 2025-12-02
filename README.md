@@ -10,6 +10,12 @@ Select ".NET Runtime"
 Most users will need the x64 installer.  
 This program has only been tested on Windows x64.  
 
+Users will need to copy the ".rap" files used to decrypt the DLC content to the "/Assets/rap/" folder.  
+This is necessary to be able to decrypt and encrypt the packagelists.  
+These rap files should be found alongside DLC PKGs used to install content in the first place.  
+RPCS3, and probably a real PS3, will store the rap files here when installed:  
+/dev_hdd0/home/00000001/exdata/  
+
 # Usage
 This tool does not have a GUI.  
 Instead a user drags and drops the packagelist folder into GucPackageUpdate.exe.  
@@ -28,6 +34,9 @@ A: See Requirements; This is generally caused by a lack of .NET.
 
 Q: I drag and drop into the window but nothing happens?  
 A: See Usage; Users must drag and drop into the program exe file, not the window it opens.  
+
+Q: The tool says an error occurred about not finding rap files?  
+A: See Requirements; Rap files are required to decrypt and encrypt packagelists.  
 
 Q: The game is saying the DLC is corrupted?  
 A: Make sure you didn't remove any DLC files and that the updater was ran after; If this still fails make an issue report.  
