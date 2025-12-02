@@ -15,7 +15,7 @@ This tool does not have a GUI.
 Instead a user drags and drops the packagelist folder into GucPackageUpdate.exe.  
 
 The user may also add the full path of the packagelist folder to appconfig.json.  
-If using backslashes in the path like "\", make sure they are changed to "\\" instead.  
+If using backslashes in the path like "\\", make sure they are changed to "\\\\" instead.  
 This will allow users to just launch the exe by clicking on it to immediately update the packagelist.  
 
 # FAQ
